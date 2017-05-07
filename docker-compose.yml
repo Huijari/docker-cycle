@@ -1,0 +1,9 @@
+version: '2'
+services:
+  cycle-app:
+    build: .
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - '8000:8000'
+    command: sh -c 'cd /usr/src/app && npm update && npm start'
